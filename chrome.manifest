@@ -1,5 +1,3 @@
-content magnolia-sync chrome/content/
-
-overlay chrome://browser/content/browser.xul chrome://magnolia-sync/content/status.xul
-
-locale magnolia-sync en-US chrome/locale/en-US/
+content	magnolia-sync	chrome/content/
+locale	magnolia-sync	en-US chrome/locale/en-US/
+overlay	chrome://browser/content/browser.xul chrome://magnolia-sync/content/status.xul
