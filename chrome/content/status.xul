@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://magnolia-sync/locale/magnolia-sync.dtd">
+
+<overlay id="magnolia-sync" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://magnolia-sync/content/status.js" />
+
+    <statusbar id="status-bar">
+	<statusbarpanel id="magnolia-sync-panel" label="##" src="chrome://magnolia-sync/content/icon.png" context="magnolia-sync-menu" class="statusbarpanel-iconic"/>
+	<popup id="magnolia-sync-menu" position="before_end">
+	    <menuitem label="&magnoliasync.popup.update;" oncommand="update_bookmarks();" />
+	    <menuitem label="&magnoliasync.popup.preferences;" oncommand="open_preferences();" />
+	</popup>
+    </statusbar>
+</overlay>
+

@@ -1,0 +1,5 @@
+<!ENTITY magnoliasync.popup.preferences "Preferences...">
+<!ENTITY magnoliasync.popup.update "Update now...">
+<!ENTITY magnoliasync.preferences.apikey "Enter you ma.gnolia API Key:">
+<!ENTITY magnoliasync.preferences.apikey-hint "(you can find your ma.gnolia API key by going to your ma.gnolia profile in the Applications tab)">
+
