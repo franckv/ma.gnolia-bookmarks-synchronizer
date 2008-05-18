@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<overlay id="magnolia-sync" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://magnolia-sync/content/overlay.js" />
+
+    <statusbar id="status-bar">
+	<statusbarpanel id="magnolia-sync-panel" label="Hello, World" context="magnolia-sync-menu"/>
+	<popup id="magnolia-sync-menu" position="before_end">
+	    <menuitem label="Update now" oncommand="get_all_bookmarks();" />
+	</popup>
+    </statusbar>
+</overlay>
+
