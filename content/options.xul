@@ -12,7 +12,7 @@
   - for the specific language governing rights and limitations under the
   - License.
   -
-  - The Original Code is magnolia-sync.
+  - The Original Code is magnoliasync.
   -
   - The Initial Developer of the Original Code is
   - Franck.
@@ -36,15 +36,15 @@
   - ***** END LICENSE BLOCK ***** -->
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<!DOCTYPE prefwindow SYSTEM "chrome://magnolia-sync/locale/magnolia-sync.dtd">
+<!DOCTYPE prefwindow SYSTEM "chrome://magnoliasync/locale/magnoliasync.dtd">
 
-<prefwindow id="magnolia-sync-prefs"
+<prefwindow id="magnoliasync-prefs"
     title="Preferences"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <prefpane id="magnolia-sync-options" label="Options">
+    <prefpane id="magnoliasync-options" label="Options">
 	<preferences>
-	    <preference id="pref-api-key" name="extensions.magnolia-sync.api-key" type="string"/>
+	    <preference id="pref-api-key" name="extensions.magnoliasync.api-key" type="string"/>
 	</preferences>
 	<vbox>
 	    <label>&magnoliasync.preferences.apikey;</label>

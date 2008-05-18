@@ -11,7 +11,7 @@
  * for the specific language governing rights and limitations under the
  * License.
  *
- * The Original Code is magnolia-sync.
+ * The Original Code is magnoliasync.
  *
  * The Initial Developer of the Original Code is
  * Franck.
@@ -40,7 +40,7 @@ var set_status = function(val) {
     var enumerator = wm.getEnumerator('navigator:browser'), win;
     while(enumerator.hasMoreElements()) {
 	win = enumerator.getNext();
-	var label = win.document.getElementById('magnolia-sync-panel');
+	var label = win.document.getElementById('magnoliasync-panel');
 	label.label = val;
 	label.collapsed = false;
     }
@@ -48,7 +48,7 @@ var set_status = function(val) {
 
 var get_api_key = function() {
     var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    return prefManager.getCharPref('extensions.magnolia-sync.api-key');
+    return prefManager.getCharPref('extensions.magnoliasync.api-key');
 };
 
 var insert_bookmark = function(uri, title) {
@@ -63,7 +63,7 @@ var update_bookmarks = function() {
 
     var todate = null;
 
-    document.getElementById('magnolia-sync-panel').setAttribute('src', 'chrome://magnolia-sync/content/loader.gif');
+    document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/loader.gif');
     //set_status('Updating bookmarks...');
     var findurl = 'http://ma.gnolia.com/api/rest/1/bookmarks_find?person=myself&api_key=' + get_api_key();
     req.open('GET', findurl, true);
@@ -111,18 +111,18 @@ var handleRequest = function(req) {
 		    req.send(null); 
 		}
 		else {
-		    document.getElementById('magnolia-sync-panel').setAttribute('src', 'chrome://magnolia-sync/content/icon.png');
+		    document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/icon.png');
 		}
 		//set_status(nodes.length);
 	    }
 	    else {
 		alert("Error loading page: " + req.status);
-		document.getElementById('magnolia-sync-panel').setAttribute('src', 'chrome://magnolia-sync/content/icon.png');
+		document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/icon.png');
 	    }
 	}
     } catch(e) {
 	alert("Error loading page: " + e);
-	document.getElementById('magnolia-sync-panel').setAttribute('src', 'chrome://magnolia-sync/content/icon.png');
+	document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/icon.png');
     }
 };
 
@@ -172,6 +172,6 @@ var annotate_uri = function(uri, description) {
 };
 
 var open_preferences = function() {
-    window.openDialog('chrome://magnolia-sync/content/options.xul', 'magnolia-sync', 'chrome,titlebar,toolbar,centerscreen,modal');
+    window.openDialog('chrome://magnoliasync/content/options.xul', 'magnoliasync', 'chrome,titlebar,toolbar,centerscreen,modal');
 };
 

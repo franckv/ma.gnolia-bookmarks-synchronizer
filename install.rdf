@@ -4,10 +4,10 @@
 
     <Description about="urn:mozilla:install-manifest">
 	<em:id>{d52052f2-9d68-4602-aa4f-87db475c790a}</em:id>
-	<em:name>magnolia-sync</em:name>
+	<em:name>Ma.gnolia Bookmarks Synchronizer</em:name>
 	<em:version>0.1</em:version>
 	<em:type>2</em:type>
-	<em:optionsURL>chrome://magnolia-sync/content/options.xul</em:optionsURL>
+	<em:optionsURL>chrome://magnoliasync/content/options.xul</em:optionsURL>
 
 	<em:targetApplication>
 	    <Description>
