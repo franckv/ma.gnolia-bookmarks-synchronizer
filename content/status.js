@@ -63,12 +63,22 @@ var update_bookmarks = function() {
 
     var todate = null;
 
-    document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/loader.gif');
-    //set_status('Updating bookmarks...');
-    var findurl = 'http://ma.gnolia.com/api/rest/1/bookmarks_find?person=myself&api_key=' + get_api_key();
-    req.open('GET', findurl, true);
-    req.onreadystatechange = function() {handleRequest(req);};
-    req.send(null); 
+    try {
+	document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/loader.gif');
+	//set_status('Updating bookmarks...');
+	var api_key = get_api_key();
+	if (api_key == null) {
+	    open_preferences();
+	    return;
+	}
+	var findurl = 'http://ma.gnolia.com/api/rest/1/bookmarks_find?person=myself&api_key=' + api_key;
+	req.open('GET', findurl, true);
+	req.onreadystatechange = function() {handleRequest(req);};
+	req.send(null); 
+    } catch (e) {
+	alert("Error loading page: " + e);
+	document.getElementById('magnoliasync-panel').setAttribute('src', 'chrome://magnoliasync/content/icon.png');
+    }
 };
 
 var handleRequest = function(req) {
